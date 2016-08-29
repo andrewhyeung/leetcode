@@ -2,13 +2,13 @@ function reverseVowels(string){
 	var arr = string.split(''); 
 	var front = 0; 
 	var back = string.length - 1; 
-	// var vowels = ['a', 'e', 'i', 'o', 'u']; 
-	var vowels = 'aeiou'
+	var vowels = ['a', 'e', 'i', 'o', 'u']; 
+	// var vowels = 'aeiou'
 	while(front < back){
-		if((vowels.indexOf(string[front]) != -1) === false){
+		if((vowels.indexOf(string[front].toLowerCase()) != -1) === false){
 			front += 1; 
 		}
-		else if((vowels.indexOf(string[back]) != -1) === false){
+		else if((vowels.indexOf(string[back].toLowerCase()) != -1) === false){
 			back -= 1; 
 		}
 		else{
@@ -23,15 +23,15 @@ function reverseVowels(string){
 	return arr.join('');
 }
 
-x = 'hello from the other side';
+x = "leetcode";
 
 console.log(reverseVowels(x));
 
-var vowels = 'aeiou'; 
-console.log(vowels.indexOf('k') != -1); 
-if((vowels.indexOf('k') != -1) === false){
-			console.log('hello'); 
-}
+// var vowels = 'aeiou'; 
+// console.log(vowels.indexOf('k') != -1); 
+// if((vowels.indexOf('k') != -1) === false){
+// 			console.log('hello'); 
+// }
 
 
 // New es6 syntax not fully supported for function below: 
